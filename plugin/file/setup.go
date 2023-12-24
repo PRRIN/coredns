@@ -1,7 +1,9 @@
 package file
 
 import (
+	"encoding/json"
 	"errors"
+	"fmt"
 	"os"
 	"path/filepath"
 	"time"
@@ -149,5 +151,25 @@ func fileParse(c *caddy.Controller) (Zones, error) {
 		}
 		log.Warningf("Failed to open %q: trying again in %s", openErr, reload)
 	}
+
+	// Marshal the Zone struct to a json byte slice
+	data, err := json.Marshal(z)
+	if err != nil {
+		fmt.Println("json marshal error:", err)
+	}
+
+	// Create a json file
+	file, err := os.Create("zone.json")
+	if err != nil {
+		fmt.Println("file create error:", err)
+	}
+	defer file.Close()
+
+	// Write the json byte slice to the file
+	_, err = file.Write(data)
+	if err != nil {
+		fmt.Println("file write error:", err)
+	}
+
 	return Zones{Z: z, Names: names}, nil
 }

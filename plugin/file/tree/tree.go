@@ -41,7 +41,7 @@ const (
 
 // A Node represents a node in the LLRB tree.
 type Node struct {
-	Elem        *Elem
+	Elem        *Elem `json:"elem"`
 	Left, Right *Node
 	Color       Color
 }
