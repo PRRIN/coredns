@@ -1,0 +1,7 @@
+.:1053 {
+    whoami
+}
+
+example.org:1053 {
+    file db.example.org
+}
