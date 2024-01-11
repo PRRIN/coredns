@@ -1,0 +1,22 @@
+{
+"Ptr(40000b0a20)": {"MsgHdr": {"Id": 62706, "Response": 0, "Opcode": 0, "Authoritative": 0, "Truncated": 0, "RecursionDesired": 1, "RecursionAvailable": 0, "Zero": 0, "AuthenticatedData": 1, "CheckingDisabled": 0, "Rcode": 0, "__type__": "struct"}, "Compress": 0, "Question": {"ptr": "Slice(4000540a80)", "len": 1, "cap": 1, "__type__": "slice"}, "Answer": {"ptr": "nil", "len": 0, "cap": 0, "__type__": "slice"}, "Ns": {"ptr": "nil", "len": 0, "cap": 0, "__type__": "slice"}, "Extra": {"ptr": "Slice(4000786b20)", "len": 1, "cap": 1, "__type__": "slice"}, "__type__": "struct"},
+"Slice(4000540a80)": [{"Name": "www.example.org.", "Qtype": 1, "Qclass": 1, "__type__": "struct"}],
+"Slice(4000786b20)": [{"type": "22f86f0", "value": "Iface(400054a780)", "__type__": "iface"}],
+"Iface(4000540a98)": {"Code": 0, "Cookie": "ec7570d8328138a2", "__type__": "struct"},
+"Iface(4000540ac8)": {"ResponseWriter": {"type": "22fa848", "value": "Iface(400019c400)", "__type__": "iface"}, "req": "4000540ad8", "__type__": "struct"},
+"40000bfaa0": {"pfd": {"fdmu": {"state": 10, "rsema": 0, "wsema": 0, "__type__": "struct"}, "Sysfd": 8, "SysFile": {"iovecs": "400050a718", "__type__": "struct"}, "pd": {"runtimeCtx": 281472398257304, "__type__": "struct"}, "csema": 0, "isBlocking": 0, "IsStream": 0, "ZeroReadIsEOF": 0, "isFile": 0, "__type__": "struct"}, "family": 10, "sotype": 2, "isConnected": 0, "net": "udp", "laddr": {"type": "22d8ed0", "value": "Iface(400076a450)", "__type__": "iface"}, "raddr": {"type": "0", "value": "nil", "__type__": "iface"}, "__type__": "struct"},
+"Slice(40000bc910)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 127, 0, 0, 1],
+"Slice(400011c540)": [36, 0, 0, 0, 0, 0, 0, 0, 41, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 127, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+"400019c458": {"raddr": "4000546380", "context": {"ptr": "Slice(400011c540)", "len": 40, "cap": 40, "__type__": "slice"}, "__type__": "struct"},
+"4000546380": {"IP": {"ptr": "Slice(40000bc910)", "len": 16, "cap": 16, "__type__": "slice"}, "Port": 41030, "Zone": "", "__type__": "struct"},
+"4000540ad8": {"MsgHdr": {"Id": 62706, "Response": 0, "Opcode": 0, "Authoritative": 0, "Truncated": 0, "RecursionDesired": 1, "RecursionAvailable": 0, "Zero": 0, "AuthenticatedData": 1, "CheckingDisabled": 0, "Rcode": 0, "__type__": "struct"}, "Compress": 0, "Question": {"ptr": "Slice(4000540a80)", "len": 1, "cap": 1, "__type__": "slice"}, "Answer": {"ptr": "nil", "len": 0, "cap": 0, "__type__": "slice"}, "Ns": {"ptr": "nil", "len": 0, "cap": 0, "__type__": "slice"}, "Extra": {"ptr": "Slice(4000786b20)", "len": 1, "cap": 1, "__type__": "slice"}, "__type__": "struct"},
+"request": {"Req": "Ptr(40000b0a20)", "W": {"type": "22f9350", "value": "Iface(4000540ac8)", "__type__": "iface"}, "Zone": "", "Size": 1232, "Do": 0, "Family": 1, "Name": "www.example.org.", "Ip": "127.0.0.1", "Port": "127.0.0.1", "LocalPort": "1053", "LocalIP": "::", "__type__": "struct"},
+"Iface(400054a780)": {"Hdr": {"Name": ".", "Rrtype": 41, "Class": 1232, "Ttl": 0, "Rdlength": 12, "__type__": "struct"}, "Option": {"ptr": "Slice(4000786b10)", "len": 1, "cap": 1, "__type__": "slice"}, "__type__": "struct"},
+"Iface(400019c400)": {"closed": 0, "hijacked": 0, "tsigTimersOnly": 0, "tsigStatus": {"type": "0", "value": "nil", "__type__": "iface"}, "tsigRequestMAC": "", "tsigProvider": {"type": "22d9e98", "value": "Iface(400076a2d0)", "__type__": "iface"}, "udp": {"type": "22f73f0", "value": "Iface(40000bfaa0)", "__type__": "iface"}, "tcp": {"type": "0", "value": "nil", "__type__": "iface"}, "udpSession": "400019c458", "pcSession": {"type": "0", "value": "nil", "__type__": "iface"}, "writer": {"type": "22d0b00", "value": "Iface(400019c400)", "__type__": "iface"}, "__type__": "struct"},
+"Iface(400076a2d0)": {"__type__": "map"},
+"Iface(400076a450)": {"IP": {"ptr": "Slice(40001eafcc)", "len": 16, "cap": 16, "__type__": "slice"}, "Port": 1053, "Zone": "", "__type__": "struct"},
+"Slice(40001eafcc)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+"Slice(4000786b10)": [{"type": "22f2968", "value": "Iface(4000540a98)", "__type__": "iface"}],
+"Iface(40000bfaa0)": {"conn": {"fd": "40000bfaa0", "__type__": "struct"}, "__type__": "struct"},
+"400050a718": {"__type__": "invalid"}
+}
