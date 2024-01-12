@@ -37,9 +37,9 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 	switch val.Kind() {
 	case reflect.Bool:
 		if val.Bool() {
-			(*json)[cur] = append((*json)[cur], "1")
+			(*json)[cur] = append((*json)[cur], "{ \"value\": 1, \"__type__\": \"bool\" }")
 		} else {
-			(*json)[cur] = append((*json)[cur], "0")
+			(*json)[cur] = append((*json)[cur], "{ \"value\": 0, \"__type__\": \"bool\" }")
 		}
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
 		(*json)[cur] = append((*json)[cur], fmt.Sprint(val.Int()))
@@ -81,13 +81,13 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 		if sep {
 			(*json)[cur] = append((*json)[cur], ", ")
 		}
-		(*json)[cur] = append((*json)[cur], "\"__type__\": \"map\"}")
+		(*json)[cur] = append((*json)[cur], fmt.Sprintf("\"__type__\": \"%s\"}", val.Type()))
 
 	case reflect.Pointer:
 		var addr string
 		if val.CanAddr() {
 			if val.UnsafeAddr() == 0 {
-				(*json)[cur] = append((*json)[cur], "\"nil\"")
+				(*json)[cur] = append((*json)[cur], "\"zeroVal\"")
 				return
 			}
 			addr = fmt.Sprintf("\"%x\"", val.UnsafeAddr())
@@ -101,34 +101,33 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 		(*json)[addr] = make([]string, 0)
 		dump(val.Elem(), json, addr)
 	case reflect.Interface:
-		(*json)[cur] = append((*json)[cur], fmt.Sprintf("{\"type\": \"%x\"", val.InterfaceData()[0]))
 		if val.InterfaceData()[1] == 0 {
-			(*json)[cur] = append((*json)[cur], ", \"value\": \"nil\", \"__type__\": \"iface\"}")
+			(*json)[cur] = append((*json)[cur], "\"zeroVal\"")
 			return
 		}
+		typ := val.Type()
 		addr := fmt.Sprintf("\"Iface(%x)\"", val.InterfaceData()[1])
-		(*json)[cur] = append((*json)[cur], fmt.Sprintf(", \"value\": %s, \"__type__\": \"iface\"}", addr))
+		for ; val.Elem().Kind() == reflect.Pointer; val = val.Elem() {
+			// fmt.Printf("-> %s(%s)", val.Elem(), val.Elem().Kind())
+		}
+		itab := fmt.Sprintf("\"Itab(%s)\"", val.Type())
+		(*json)[cur] = append((*json)[cur], fmt.Sprintf("{\"itab\": %s, \"data\": %s, \"__type__\": \"%s\"}", itab, addr, typ))
+
 		if _, ok := (*json)[addr]; ok {
 			return
 		}
 		(*json)[addr] = make([]string, 0)
-		for ; val.Elem().Kind() == reflect.Pointer; val = val.Elem() {
-			// fmt.Printf("-> %s(%s)", val.Elem(), val.Elem().Kind())
-		}
-		// fmt.Printf("-> %s(%s)\n", val.Elem(), val.Elem().Kind())
 		dump(val.Elem(), json, addr)
 	case reflect.Slice:
 		if val.Pointer() == 0 {
-			(*json)[cur] = append((*json)[cur], "{\"ptr\": \"nil\"")
-			(*json)[cur] = append((*json)[cur], fmt.Sprintf(", \"len\": %d", val.Len()))
-			(*json)[cur] = append((*json)[cur], fmt.Sprintf(", \"cap\": %d, \"__type__\": \"slice\"}", val.Cap()))
+			(*json)[cur] = append((*json)[cur], "\"zeroVal\"")
 			return
 		}
 
 		addr := fmt.Sprintf("\"Slice(%x)\"", val.Pointer())
 		(*json)[cur] = append((*json)[cur], fmt.Sprintf("{\"ptr\": %s", addr))
 		(*json)[cur] = append((*json)[cur], fmt.Sprintf(", \"len\": %d", val.Len()))
-		(*json)[cur] = append((*json)[cur], fmt.Sprintf(", \"cap\": %d, \"__type__\": \"slice\"}", val.Cap()))
+		(*json)[cur] = append((*json)[cur], fmt.Sprintf(", \"cap\": %d, \"__type__\": \"%s\"}", val.Cap(), val.Type()))
 
 		if _, ok := (*json)[addr]; ok {
 			return
@@ -147,7 +146,7 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 		(*json)[addr] = append((*json)[addr], "]")
 
 	case reflect.String:
-		(*json)[cur] = append((*json)[cur], fmt.Sprintf("\"%s\"", val.String()))
+		(*json)[cur] = append((*json)[cur], fmt.Sprintf("{\"value\": \"%s\", \"__type__\": \"string\"}", val.String()))
 	case reflect.Struct:
 		(*json)[cur] = append((*json)[cur], "{")
 		sep := false
@@ -163,9 +162,13 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 		if sep {
 			(*json)[cur] = append((*json)[cur], ", ")
 		}
-		(*json)[cur] = append((*json)[cur], "\"__type__\": \"struct\"}")
+		(*json)[cur] = append((*json)[cur], fmt.Sprintf("\"__type__\": \"%s\"}", val.Type()))
 	default:
-		(*json)[cur] = append((*json)[cur], fmt.Sprintf("{\"__type__\": \"%s\"}", val.Kind()))
+		if val.IsValid() {
+			(*json)[cur] = append((*json)[cur], fmt.Sprintf("{\"__type__\": \"%s\"}", val.Type()))
+		} else {
+			(*json)[cur] = append((*json)[cur], "\"zeroVal\"")
+		}
 	}
 
 }
