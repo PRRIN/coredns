@@ -37,9 +37,9 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 	switch val.Kind() {
 	case reflect.Bool:
 		if val.Bool() {
-			(*json)[cur] = append((*json)[cur], "{ \"value\": 1, \"__type__\": \"bool\" }")
+			(*json)[cur] = append((*json)[cur], "1")
 		} else {
-			(*json)[cur] = append((*json)[cur], "{ \"value\": 0, \"__type__\": \"bool\" }")
+			(*json)[cur] = append((*json)[cur], "0")
 		}
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
 		(*json)[cur] = append((*json)[cur], fmt.Sprint(val.Int()))
