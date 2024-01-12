@@ -72,7 +72,7 @@ func TestShouldTransfer(t *testing.T) {
 	defer s.Close()
 
 	z := NewZone("testzone", "test")
-	z.origin = testZone
+	z.Origin = testZone
 	z.TransferFrom = []string{s.Addr}
 
 	// when we have a nil SOA (initial state)
@@ -110,7 +110,7 @@ func TestTransferIn(t *testing.T) {
 	defer s.Close()
 
 	z := new(Zone)
-	z.origin = testZone
+	z.Origin = testZone
 	z.TransferFrom = []string{s.Addr}
 
 	if err := z.TransferIn(); err != nil {
@@ -123,7 +123,7 @@ func TestTransferIn(t *testing.T) {
 
 func TestIsNotify(t *testing.T) {
 	z := new(Zone)
-	z.origin = testZone
+	z.Origin = testZone
 	state := newRequest(testZone, dns.TypeSOA)
 	// need to set opcode
 	state.Req.Opcode = dns.OpcodeNotify

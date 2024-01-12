@@ -3,8 +3,10 @@ package file
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
+	"os"
 
 	"github.com/coredns/coredns/plugin"
 	clog "github.com/coredns/coredns/plugin/pkg/log"
@@ -34,6 +36,25 @@ type (
 // ServeDNS implements the plugin.Handle interface.
 func (f File) ServeDNS(ctx context.Context, w dns.ResponseWriter, r *dns.Msg) (int, error) {
 	state := request.Request{W: w, Req: r}
+
+	// Marshal the Zone struct to a json byte slice
+	data, err := json.Marshal(state)
+	if err != nil {
+		fmt.Println("json marshal error:", err)
+	}
+
+	// Create a json file
+	file, err := os.Create("request.json")
+	if err != nil {
+		fmt.Println("file create error:", err)
+	}
+	defer file.Close()
+
+	// Write the json byte slice to the file
+	_, err = file.Write(data)
+	if err != nil {
+		fmt.Println("file write error:", err)
+	}
 
 	qname := state.Name()
 	// TODO(miek): match the qname better in the map

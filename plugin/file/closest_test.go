@@ -26,7 +26,7 @@ func TestClosestEncloser(t *testing.T) {
 	for _, tc := range tests {
 		ce, _ := z.ClosestEncloser(tc.in)
 		if ce == nil {
-			if z.origin != tc.out {
+			if z.Origin != tc.out {
 				t.Errorf("Expected ce to be %s for %s, got %s", tc.out, tc.in, ce.Name())
 			}
 			continue

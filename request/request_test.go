@@ -13,7 +13,7 @@ func TestRequestDo(t *testing.T) {
 	st := testRequest()
 
 	st.Do()
-	if !st.do {
+	if !st.Ddo {
 		t.Errorf("Expected st.do to be set")
 	}
 }
@@ -273,11 +273,11 @@ func TestRequestClear(t *testing.T) {
 		t.Errorf("Failed to get Port from request")
 	}
 	st.Clear()
-	if st.ip != "" {
+	if st.Ip != "" {
 		t.Errorf("Expected st.ip to be cleared after Clear")
 	}
 
-	if st.port != "" {
+	if st.Pport != "" {
 		t.Errorf("Expected st.port to be cleared after Clear")
 	}
 }

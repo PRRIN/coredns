@@ -13,7 +13,7 @@ func (z *Zone) TransferIn() error {
 		return nil
 	}
 	m := new(dns.Msg)
-	m.SetAxfr(z.origin)
+	m.SetAxfr(z.Origin)
 
 	z1 := z.CopyWithoutApex()
 	var (
@@ -26,19 +26,19 @@ Transfer:
 		t := new(dns.Transfer)
 		c, err := t.In(m, tr)
 		if err != nil {
-			log.Errorf("Failed to setup transfer `%s' with `%q': %v", z.origin, tr, err)
+			log.Errorf("Failed to setup transfer `%s' with `%q': %v", z.Origin, tr, err)
 			Err = err
 			continue Transfer
 		}
 		for env := range c {
 			if env.Error != nil {
-				log.Errorf("Failed to transfer `%s' from %q: %v", z.origin, tr, env.Error)
+				log.Errorf("Failed to transfer `%s' from %q: %v", z.Origin, tr, env.Error)
 				Err = env.Error
 				continue Transfer
 			}
 			for _, rr := range env.RR {
 				if err := z1.Insert(rr); err != nil {
-					log.Errorf("Failed to parse transfer `%s' from: %q: %v", z.origin, tr, err)
+					log.Errorf("Failed to parse transfer `%s' from: %q: %v", z.Origin, tr, err)
 					Err = err
 					continue Transfer
 				}
@@ -56,7 +56,7 @@ Transfer:
 	z.Apex = z1.Apex
 	z.Expired = false
 	z.Unlock()
-	log.Infof("Transferred: %s from %s", z.origin, tr)
+	log.Infof("Transferred: %s from %s", z.Origin, tr)
 	return nil
 }
 
@@ -66,7 +66,7 @@ func (z *Zone) shouldTransfer() (bool, error) {
 	c := new(dns.Client)
 	c.Net = "tcp" // do this query over TCP to minimize spoofing
 	m := new(dns.Msg)
-	m.SetQuestion(z.origin, dns.TypeSOA)
+	m.SetQuestion(z.Origin, dns.TypeSOA)
 
 	var Err error
 	serial := -1

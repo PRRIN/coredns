@@ -18,18 +18,18 @@ type Request struct {
 	// Optional lowercased zone of this query.
 	Zone string
 
-	// Cache size after first call to Size or Do. If size is zero nothing has been cached yet.
+	// Cache Ssize after first call to Size or Do. If Ssize is zero nothing has been cached yet.
 	// Both Size and Do set these values (and cache them).
-	size uint16 // UDP buffer size, or 64K in case of TCP.
-	do   bool   // DNSSEC OK value
+	Ssize uint16 // UDP buffer Ssize, or 64K in case of TCP.
+	Ddo   bool   // DNSSEC OK value
 
 	// Caches
-	family    int8   // transport's family.
-	name      string // lowercase qname.
-	ip        string // client's ip.
-	port      string // client's port.
-	localPort string // server's port.
-	localIP   string // server's ip.
+	Ffamily    int8   // transport's Ffamily.
+	Nname      string // lowercase qname.
+	Ip         string // client's ip.
+	Pport      string // client's port.
+	LlocalPort string // server's port.
+	LlocalIP   string // server's ip.
 }
 
 // NewWithQuestion returns a new request based on the old, but with a new question
@@ -42,66 +42,66 @@ func (r *Request) NewWithQuestion(name string, typ uint16) Request {
 
 // IP gets the (remote) IP address of the client making the request.
 func (r *Request) IP() string {
-	if r.ip != "" {
-		return r.ip
+	if r.Ip != "" {
+		return r.Ip
 	}
 
 	ip, _, err := net.SplitHostPort(r.W.RemoteAddr().String())
 	if err != nil {
-		r.ip = r.W.RemoteAddr().String()
-		return r.ip
+		r.Ip = r.W.RemoteAddr().String()
+		return r.Ip
 	}
 
-	r.ip = ip
-	return r.ip
+	r.Ip = ip
+	return r.Ip
 }
 
 // LocalIP gets the (local) IP address of server handling the request.
 func (r *Request) LocalIP() string {
-	if r.localIP != "" {
-		return r.localIP
+	if r.LlocalIP != "" {
+		return r.LlocalIP
 	}
 
 	ip, _, err := net.SplitHostPort(r.W.LocalAddr().String())
 	if err != nil {
-		r.localIP = r.W.LocalAddr().String()
-		return r.localIP
+		r.LlocalIP = r.W.LocalAddr().String()
+		return r.LlocalIP
 	}
 
-	r.localIP = ip
-	return r.localIP
+	r.LlocalIP = ip
+	return r.LlocalIP
 }
 
 // Port gets the (remote) port of the client making the request.
 func (r *Request) Port() string {
-	if r.port != "" {
-		return r.port
+	if r.Pport != "" {
+		return r.Pport
 	}
 
 	_, port, err := net.SplitHostPort(r.W.RemoteAddr().String())
 	if err != nil {
-		r.port = "0"
-		return r.port
+		r.Pport = "0"
+		return r.Pport
 	}
 
-	r.port = port
-	return r.port
+	r.Pport = port
+	return r.Pport
 }
 
 // LocalPort gets the local port of the server handling the request.
 func (r *Request) LocalPort() string {
-	if r.localPort != "" {
-		return r.localPort
+	if r.LlocalPort != "" {
+		return r.LlocalPort
 	}
 
 	_, port, err := net.SplitHostPort(r.W.LocalAddr().String())
 	if err != nil {
-		r.localPort = "0"
-		return r.localPort
+		r.LlocalPort = "0"
+		return r.LlocalPort
 	}
 
-	r.localPort = port
-	return r.localPort
+	r.LlocalPort = port
+	return r.LlocalPort
 }
 
 // RemoteAddr returns the net.Addr of the client that sent the current request.
@@ -121,10 +121,10 @@ func (r *Request) Proto() string {
 	return "udp"
 }
 
-// Family returns the family of the transport, 1 for IPv4 and 2 for IPv6.
+// Family returns the Ffamily of the transport, 1 for IPv4 and 2 for IPv6.
 func (r *Request) Family() int {
-	if r.family != 0 {
-		return int(r.family)
+	if r.Ffamily != 0 {
+		return int(r.Ffamily)
 	}
 
 	var a net.IP
@@ -137,43 +137,43 @@ func (r *Request) Family() int {
 	}
 
 	if a.To4() != nil {
-		r.family = 1
+		r.Ffamily = 1
 		return 1
 	}
-	r.family = 2
+	r.Ffamily = 2
 	return 2
 }
 
 // Do returns true if the request has the DO (DNSSEC OK) bit set.
 func (r *Request) Do() bool {
-	if r.size != 0 {
-		return r.do
+	if r.Ssize != 0 {
+		return r.Ddo
 	}
 
 	r.Size()
-	return r.do
+	return r.Ddo
 }
 
 // Len returns the length in bytes in the request.
 func (r *Request) Len() int { return r.Req.Len() }
 
-// Size returns if buffer size *advertised* in the requests OPT record.
-// Or when the request was over TCP, we return the maximum allowed size of 64K.
+// Size returns if buffer Ssize *advertised* in the requests OPT record.
+// Or when the request was over TCP, we return the maximum allowed Ssize of 64K.
 func (r *Request) Size() int {
-	if r.size != 0 {
-		return int(r.size)
+	if r.Ssize != 0 {
+		return int(r.Ssize)
 	}
 
-	size := uint16(0)
+	Ssize := uint16(0)
 	if o := r.Req.IsEdns0(); o != nil {
-		r.do = o.Do()
-		size = o.UDPSize()
+		r.Ddo = o.Do()
+		Ssize = o.UDPSize()
 	}
 
-	// normalize size
-	size = edns.Size(r.Proto(), size)
-	r.size = size
-	return int(size)
+	// normalize Ssize
+	Ssize = edns.Size(r.Proto(), Ssize)
+	r.Ssize = Ssize
+	return int(Ssize)
 }
 
 // SizeAndDo adds an OPT record that the reflects the intent from request.
@@ -191,7 +191,7 @@ func (r *Request) SizeAndDo(m *dns.Msg) bool {
 		mo.SetUDPSize(o.UDPSize())
 		mo.Hdr.Ttl &= 0xff00 // clear flags
 
-		// Assume if the message m has options set, they are OK and represent what an upstream can do.
+		// Assume if the message m has options set, they are OK and represent what an upstream can Ddo.
 
 		if o.Do() {
 			mo.SetDo()
@@ -226,10 +226,10 @@ func (r *Request) Scrub(reply *dns.Msg) *dns.Msg {
 
 	if r.Proto() == "udp" {
 		rl := reply.Len()
-		// Last ditch attempt to avoid fragmentation, if the size is bigger than the v4/v6 UDP fragmentation
+		// Last ditch attempt to avoid fragmentation, if the Ssize is bigger than the v4/v6 UDP fragmentation
 		// limit and sent via UDP compress it (in the hope we go under that limit). Limits taken from NSD:
 		//
-		//    .., 1480 (EDNS/IPv4), 1220 (EDNS/IPv6), or the advertised EDNS buffer size if that is
+		//    .., 1480 (EDNS/IPv4), 1220 (EDNS/IPv6), or the advertised EDNS buffer Ssize if that is
 		//    smaller than the EDNS default.
 		// See: https://open.nlnetlabs.nl/pipermail/nsd-users/2011-November/001278.html
 		if rl > 1480 && r.Family() == 1 {
@@ -269,24 +269,24 @@ func (r *Request) QType() uint16 {
 }
 
 // Name returns the name of the question in the request. Note
-// this name will always have a closing dot and will be lower cased. After a call Name
+// this name will always have a closing Ddot and will be lower cased. After a call Name
 // the value will be cached. To clear this caching call Clear.
 // If the request is malformed the root zone is returned.
 func (r *Request) Name() string {
-	if r.name != "" {
-		return r.name
+	if r.Nname != "" {
+		return r.Nname
 	}
 	if r.Req == nil {
-		r.name = "."
+		r.Nname = "."
 		return "."
 	}
 	if len(r.Req.Question) == 0 {
-		r.name = "."
+		r.Nname = "."
 		return "."
 	}
 
-	r.name = strings.ToLower(dns.Name(r.Req.Question[0].Name).String())
-	return r.name
+	r.Nname = strings.ToLower(dns.Name(r.Req.Question[0].Name).String())
+	return r.Nname
 }
 
 // QName returns the name of the question in the request.
@@ -330,18 +330,18 @@ func (r *Request) QClass() uint16 {
 
 // Clear clears all caching from Request s.
 func (r *Request) Clear() {
-	r.name = ""
-	r.ip = ""
-	r.localIP = ""
-	r.port = ""
-	r.localPort = ""
-	r.family = 0
-	r.size = 0
-	r.do = false
+	r.Nname = ""
+	r.Ip = ""
+	r.LlocalIP = ""
+	r.Pport = ""
+	r.LlocalPort = ""
+	r.Ffamily = 0
+	r.Ssize = 0
+	r.Ddo = false
 }
 
 // Match checks if the reply matches the qname and qtype from the request, it returns
-// false when they don't match.
+// false when they Ddon't match.
 func (r *Request) Match(reply *dns.Msg) bool {
 	if len(reply.Question) != 1 {
 		return false

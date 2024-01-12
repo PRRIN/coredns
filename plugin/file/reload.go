@@ -22,16 +22,16 @@ func (z *Zone) Reload(t *transfer.Transfer) error {
 				zFile := z.File()
 				reader, err := os.Open(filepath.Clean(zFile))
 				if err != nil {
-					log.Errorf("Failed to open zone %q in %q: %v", z.origin, zFile, err)
+					log.Errorf("Failed to open zone %q in %q: %v", z.Origin, zFile, err)
 					continue
 				}
 
 				serial := z.SOASerialIfDefined()
-				zone, err := Parse(reader, z.origin, zFile, serial)
+				zone, err := Parse(reader, z.Origin, zFile, serial)
 				reader.Close()
 				if err != nil {
 					if _, ok := err.(*serialErr); !ok {
-						log.Errorf("Parsing zone %q: %v", z.origin, err)
+						log.Errorf("Parsing zone %q: %v", z.Origin, err)
 					}
 					continue
 				}
@@ -42,9 +42,9 @@ func (z *Zone) Reload(t *transfer.Transfer) error {
 				z.Tree = zone.Tree
 				z.Unlock()
 
-				log.Infof("Successfully reloaded zone %q in %q with %d SOA serial", z.origin, zFile, z.Apex.SOA.Serial)
+				log.Infof("Successfully reloaded zone %q in %q with %d SOA serial", z.Origin, zFile, z.Apex.SOA.Serial)
 				if t != nil {
-					if err := t.Notify(z.origin); err != nil {
+					if err := t.Notify(z.Origin); err != nil {
 						log.Warningf("Failed sending notifies: %s", err)
 					}
 				}

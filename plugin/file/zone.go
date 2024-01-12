@@ -15,9 +15,9 @@ import (
 
 // Zone is a structure that contains all data related to a DNS zone.
 type Zone struct {
-	origin  string
-	origLen int
-	file    string
+	Origin  string
+	OrigLen int
+	Ffile   string
 	*tree.Tree
 	Apex
 	Expired bool
@@ -44,9 +44,9 @@ type Apex struct {
 // NewZone returns a new zone.
 func NewZone(name, file string) *Zone {
 	return &Zone{
-		origin:         dns.Fqdn(name),
-		origLen:        dns.CountLabel(dns.Fqdn(name)),
-		file:           filepath.Clean(file),
+		Origin:         dns.Fqdn(name),
+		OrigLen:        dns.CountLabel(dns.Fqdn(name)),
+		Ffile:          filepath.Clean(file),
 		Tree:           &tree.Tree{},
 		reloadShutdown: make(chan bool),
 	}
@@ -54,7 +54,7 @@ func NewZone(name, file string) *Zone {
 
 // Copy copies a zone.
 func (z *Zone) Copy() *Zone {
-	z1 := NewZone(z.origin, z.file)
+	z1 := NewZone(z.Origin, z.Ffile)
 	z1.TransferFrom = z.TransferFrom
 	z1.Expired = z.Expired
 
@@ -64,7 +64,7 @@ func (z *Zone) Copy() *Zone {
 
 // CopyWithoutApex copies zone z without the Apex records.
 func (z *Zone) CopyWithoutApex() *Zone {
-	z1 := NewZone(z.origin, z.file)
+	z1 := NewZone(z.Origin, z.Ffile)
 	z1.TransferFrom = z.TransferFrom
 	z1.Expired = z.Expired
 
@@ -79,7 +79,7 @@ func (z *Zone) Insert(r dns.RR) error {
 	case dns.TypeNS:
 		r.(*dns.NS).Ns = strings.ToLower(r.(*dns.NS).Ns)
 
-		if r.Header().Name == z.origin {
+		if r.Header().Name == z.Origin {
 			z.Apex.NS = append(z.Apex.NS, r)
 			return nil
 		}
@@ -90,7 +90,7 @@ func (z *Zone) Insert(r dns.RR) error {
 		z.Apex.SOA = r.(*dns.SOA)
 		return nil
 	case dns.TypeNSEC3, dns.TypeNSEC3PARAM:
-		return fmt.Errorf("NSEC3 zone is not supported, dropping RR: %s for zone: %s", r.Header().Name, z.origin)
+		return fmt.Errorf("NSEC3 zone is not supported, dropping RR: %s for zone: %s", r.Header().Name, z.Origin)
 	case dns.TypeRRSIG:
 		x := r.(*dns.RRSIG)
 		switch x.TypeCovered {
@@ -98,7 +98,7 @@ func (z *Zone) Insert(r dns.RR) error {
 			z.Apex.SIGSOA = append(z.Apex.SIGSOA, x)
 			return nil
 		case dns.TypeNS:
-			if r.Header().Name == z.origin {
+			if r.Header().Name == z.Origin {
 				z.Apex.SIGNS = append(z.Apex.SIGNS, x)
 				return nil
 			}
@@ -119,13 +119,13 @@ func (z *Zone) Insert(r dns.RR) error {
 func (z *Zone) File() string {
 	z.RLock()
 	defer z.RUnlock()
-	return z.file
+	return z.Ffile
 }
 
 // SetFile updates the file path in a safe way.
 func (z *Zone) SetFile(path string) {
 	z.Lock()
-	z.file = path
+	z.Ffile = path
 	z.Unlock()
 }
 
@@ -153,14 +153,14 @@ func (z *Zone) ApexIfDefined() ([]dns.RR, error) {
 }
 
 // NameFromRight returns the labels from the right, staring with the
-// origin and then i labels extra. When we are overshooting the name
+// Origin and then i labels extra. When we are overshooting the name
 // the returned boolean is set to true.
 func (z *Zone) nameFromRight(qname string, i int) (string, bool) {
 	if i <= 0 {
-		return z.origin, false
+		return z.Origin, false
 	}
 
-	for j := 1; j <= z.origLen; j++ {
+	for j := 1; j <= z.OrigLen; j++ {
 		if _, shot := dns.PrevLabel(qname, j); shot {
 			return qname, shot
 		}
@@ -169,7 +169,7 @@ func (z *Zone) nameFromRight(qname string, i int) (string, bool) {
 	k := 0
 	var shot bool
 	for j := 1; j <= i; j++ {
-		k, shot = dns.PrevLabel(qname, j+z.origLen)
+		k, shot = dns.PrevLabel(qname, j+z.OrigLen)
 		if shot {
 			return qname, shot
 		}

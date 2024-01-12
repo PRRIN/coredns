@@ -45,7 +45,7 @@ func (z *Zone) Lookup(ctx context.Context, state request.Request, qname string) 
 		return nil, nil, nil, ServerFailure
 	}
 
-	if qname == z.origin {
+	if qname == z.Origin {
 		switch qtype {
 		case dns.TypeSOA:
 			return ap.soa(do), ap.ns(do), nil, Success
@@ -208,7 +208,7 @@ func (z *Zone) Lookup(ctx context.Context, state request.Request, qname string) 
 		return rrs, ap.ns(do), additional, Success
 	}
 
-	// Haven't found the original name.
+	// Haven't found the Original name.
 
 	// Found wildcard.
 	if wildElem != nil {
@@ -410,7 +410,7 @@ func (z *Zone) additionalProcessing(answer []dns.RR, do bool) (extra []dns.RR) {
 		case *dns.MX:
 			name = x.Mx
 		}
-		if len(name) == 0 || !dns.IsSubDomain(z.origin, name) {
+		if len(name) == 0 || !dns.IsSubDomain(z.Origin, name) {
 			continue
 		}
 
