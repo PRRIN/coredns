@@ -20,7 +20,7 @@ func (n *Node) walk(fn func(*Elem, map[uint16][]dns.RR) error) error {
 		}
 	}
 
-	if err := fn(n.Elem, n.Elem.M); err != nil {
+	if err := fn(n.Elem, n.Elem.m); err != nil {
 		return err
 	}
 

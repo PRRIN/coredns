@@ -45,7 +45,7 @@ func (n *Node) authwalk(ns map[string]struct{}, fn func(*Elem, map[uint16][]dns.
 		i++
 	}
 
-	if err := fn(n.Elem, n.Elem.M, auth); err != nil {
+	if err := fn(n.Elem, n.Elem.m, auth); err != nil {
 		return err
 	}
 

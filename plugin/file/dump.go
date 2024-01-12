@@ -196,6 +196,14 @@ func writeJsonFile(name string, json map[string][]string) {
 
 func dumpZone(z *Zone) {
 
+	// Make sure to call Elem.Name() on all Elems at least once.
+	// This causes the Elem to cache its name, which would otherwise lead to
+	// non-constant dataplane for Iceberg.
+	z.Walk(func(e *tree.Elem, rr map[uint16][]dns.RR) error {
+		e.Name()
+		return nil
+	})
+
 	// Dump the zone
 	_z := _Zone{
 		Origin:         z.origin,
