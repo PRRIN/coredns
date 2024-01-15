@@ -1,0 +1,16 @@
+{
+"Ptr(c0004f0cf0)": {"Root": "c0004f0cf0", "Count": 1, "__type__": "tree.Tree"},
+"Slice(c0004f0d10)": [{"itab": "Itab(*dns.A)", "data": "Iface(c000222600)", "__type__": "dns.RR"}],
+"c0001ba3a8": "zeroVal",
+"c0001ba3b0": "zeroVal",
+"Iface(c0007998f0)": {"Hdr": {"Name": {"value": "www.bank.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "uni.www.bank.uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "www.bank.example.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/6818.txt", "__type__": "string"}, "Tree": "Ptr(c0004f0cf0)", "Apex": {"SOA": "Ptr(c0000a9080)", "NS": {"ptr": "Slice(c0001ba380)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c0001ba3a0": {"m": {"1": {"ptr": "Slice(c0004f0d10)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "www.bank.example.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c0006a9030)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1],
+"Slice(c0001ba380)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000799890)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0007998f0)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c000799890)": {"Hdr": {"Name": {"value": "www.bank.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0004f0cf0": {"Elem": "c0001ba3a0", "Left": "c0001ba3a8", "Right": "c0001ba3b0", "Color": 1, "__type__": "tree.Node"},
+"Iface(c000222600)": {"Hdr": {"Name": {"value": "www.bank.example.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c0006a9030)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"Ptr(c0000a9080)": {"Hdr": {"Name": {"value": "www.bank.example.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"}
+}

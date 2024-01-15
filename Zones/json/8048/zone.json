@@ -1,0 +1,19 @@
+{
+"Ptr(c0006d76e0)": {"Hdr": {"Name": {"value": "www.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0004af360)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00050b0b0)", "__type__": "dns.RR"}],
+"Iface(c00050b0b0)": {"Hdr": {"Name": {"value": "www.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c0004af350)": {"Root": "c0004af350", "Count": 2, "__type__": "tree.Tree"},
+"c0005e0088": {"Elem": "c0005e0060", "Left": "c0005e0068", "Right": "c0005e0070", "Color": 0, "__type__": "tree.Node"},
+"Slice(c0004af370)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00050b110)", "__type__": "dns.RR"}],
+"c0005e0060": {"m": {"2": {"ptr": "Slice(c0004af370)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "net.www.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c0004af350": {"Elem": "c0005e0080", "Left": "c0005e0088", "Right": "c0005e0090", "Color": 1, "__type__": "tree.Node"},
+"c0005e0080": {"m": {"39": {"ptr": "Slice(c0004af380)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "campus.net.www.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Iface(c00050b1a0)": {"Hdr": {"Name": {"value": "campus.net.www.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "campus.foo.www.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c0005e0068": "zeroVal",
+"c0005e0090": "zeroVal",
+"zone": {"Origin": {"value": "www.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/8048.txt", "__type__": "string"}, "Tree": "Ptr(c0004af350)", "Apex": {"SOA": "Ptr(c0006d76e0)", "NS": {"ptr": "Slice(c0004af360)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Slice(c0004af380)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c00050b1a0)", "__type__": "dns.RR"}],
+"Iface(c00050b110)": {"Hdr": {"Name": {"value": "net.www.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bank.uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0005e0070": "zeroVal"
+}

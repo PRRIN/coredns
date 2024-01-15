@@ -1,0 +1,14 @@
+{
+"Slice(c00062f450)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0005ff290)", "__type__": "dns.RR"}],
+"Iface(c0005ff290)": {"Hdr": {"Name": {"value": "bank.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "campus.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c0007d8048": "zeroVal",
+"Ptr(c000615500)": {"Hdr": {"Name": {"value": "bank.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c00062f440)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0005ff230)", "__type__": "dns.RR"}],
+"Iface(c0005ff230)": {"Hdr": {"Name": {"value": "bank.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Ptr(c00062f430)": {"Root": "c00062f430", "Count": 1, "__type__": "tree.Tree"},
+"c00062f430": {"Elem": "c0007d8040", "Left": "c0007d8048", "Right": "c0007d8050", "Color": 1, "__type__": "tree.Node"},
+"c0007d8040": {"m": {"39": {"ptr": "Slice(c00062f450)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "bank.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c0007d8050": "zeroVal",
+"zone": {"Origin": {"value": "bank.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/608.txt", "__type__": "string"}, "Tree": "Ptr(c00062f430)", "Apex": {"SOA": "Ptr(c000615500)", "NS": {"ptr": "Slice(c00062f440)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"}
+}

@@ -1,0 +1,14 @@
+{
+"c0006a8548": "zeroVal",
+"Slice(c00038dbb0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007ce600)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "bankcard.www.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/2599.txt", "__type__": "string"}, "Tree": "Ptr(c00038dba0)", "Apex": {"SOA": "Ptr(c000544cc0)", "NS": {"ptr": "Slice(c00038dbb0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c0006a8540": {"m": {"39": {"ptr": "Slice(c00038dbc0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "bankcard.www.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c00038dbc0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0007ce660)", "__type__": "dns.RR"}],
+"Iface(c0007ce660)": {"Hdr": {"Name": {"value": "bankcard.www.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "example.example.www.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c0006a8550": "zeroVal",
+"Ptr(c000544cc0)": {"Hdr": {"Name": {"value": "bankcard.www.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Iface(c0007ce600)": {"Hdr": {"Name": {"value": "bankcard.www.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "www.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c00038dba0)": {"Root": "c00038dba0", "Count": 1, "__type__": "tree.Tree"},
+"c00038dba0": {"Elem": "c0006a8540", "Left": "c0006a8548", "Right": "c0006a8550", "Color": 1, "__type__": "tree.Node"}
+}

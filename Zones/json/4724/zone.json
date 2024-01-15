@@ -1,0 +1,14 @@
+{
+"Slice(c000051820)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0006f6600)", "__type__": "dns.RR"}],
+"Iface(c0006f6600)": {"Hdr": {"Name": {"value": "www.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.uni.www.bank.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "www.uni.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/4724.txt", "__type__": "string"}, "Tree": "Ptr(c000051810)", "Apex": {"SOA": "Ptr(c000696d80)", "NS": {"ptr": "Slice(c000051820)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c000051810)": {"Root": "c000051810", "Count": 1, "__type__": "tree.Tree"},
+"Slice(c000051830)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0006f6660)", "__type__": "dns.RR"}],
+"Iface(c0006f6660)": {"Hdr": {"Name": {"value": "www.uni.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "fnni.uni.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c0007785b0": "zeroVal",
+"Ptr(c000696d80)": {"Hdr": {"Name": {"value": "www.uni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c000051810": {"Elem": "c0007785a0", "Left": "c0007785a8", "Right": "c0007785b0", "Color": 1, "__type__": "tree.Node"},
+"c0007785a0": {"m": {"39": {"ptr": "Slice(c000051830)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "www.uni.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c0007785a8": "zeroVal"
+}

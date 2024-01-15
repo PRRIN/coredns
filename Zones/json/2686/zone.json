@@ -1,0 +1,14 @@
+{
+"Iface(c0007e42d0)": {"Hdr": {"Name": {"value": "mybankcard.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "uni.uni.mybankcard.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Slice(c0001cebb0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007e4270)", "__type__": "dns.RR"}],
+"Iface(c0007e4270)": {"Hdr": {"Name": {"value": "mybankcard.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "foo.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0005f9e60": {"m": {"39": {"ptr": "Slice(c0001cebd0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "mybankcard.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c0001cebd0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0007e42d0)", "__type__": "dns.RR"}],
+"c0001ceba0": {"Elem": "c0005f9e60", "Left": "c0005f9e68", "Right": "c0005f9e70", "Color": 1, "__type__": "tree.Node"},
+"c0005f9e68": "zeroVal",
+"c0005f9e70": "zeroVal",
+"Ptr(c0005b71a0)": {"Hdr": {"Name": {"value": "mybankcard.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "mybankcard.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/2686.txt", "__type__": "string"}, "Tree": "Ptr(c0001ceba0)", "Apex": {"SOA": "Ptr(c0005b71a0)", "NS": {"ptr": "Slice(c0001cebb0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c0001ceba0)": {"Root": "c0001ceba0", "Count": 1, "__type__": "tree.Tree"}
+}

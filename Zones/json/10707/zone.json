@@ -1,0 +1,22 @@
+{
+"Ptr(c00038dc00)": {"Root": "c00038dc00", "Count": 2, "__type__": "tree.Tree"},
+"c0006d8540": {"m": {"2": {"ptr": "Slice(c00038dc20)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "net.bankcard.bar.", "__type__": "string"}, "__type__": "tree.Elem"},
+"zone": {"Origin": {"value": "bankcard.bar.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/10707.txt", "__type__": "string"}, "Tree": "Ptr(c00038dc00)", "Apex": {"SOA": "Ptr(c000618d20)", "NS": {"ptr": "Slice(c00038dc10)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Slice(c00038dc20)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007d64b0)", "__type__": "dns.RR"}],
+"Iface(c0007d64b0)": {"Hdr": {"Name": {"value": "net.bankcard.bar.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.www.bar.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0006d8550": "zeroVal",
+"Iface(c0007d65a0)": {"Hdr": {"Name": {"value": "bankcard.net.bankcard.bar.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "fnni.*.*.bar.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Slice(c00068d820)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1],
+"c0006d8548": "zeroVal",
+"Ptr(c000618d20)": {"Hdr": {"Name": {"value": "bankcard.bar.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c00038dc10)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007d6450)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Slice(c00038dc30)": [{"itab": "Itab(*dns.A)", "data": "Iface(c0002211c0)", "__type__": "dns.RR"}],
+"c0006d8560": {"m": {"39": {"ptr": "Slice(c00038dc40)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "1": {"ptr": "Slice(c00038dc30)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "bankcard.net.bankcard.bar.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c00038dc40)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0007d65a0)", "__type__": "dns.RR"}],
+"Iface(c0002211c0)": {"Hdr": {"Name": {"value": "bankcard.net.bankcard.bar.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c00068d820)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"c0006d8568": {"Elem": "c0006d8540", "Left": "c0006d8548", "Right": "c0006d8550", "Color": 0, "__type__": "tree.Node"},
+"c0006d8570": "zeroVal",
+"Iface(c0007d6450)": {"Hdr": {"Name": {"value": "bankcard.bar.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"c00038dc00": {"Elem": "c0006d8560", "Left": "c0006d8568", "Right": "c0006d8570", "Color": 1, "__type__": "tree.Node"}
+}

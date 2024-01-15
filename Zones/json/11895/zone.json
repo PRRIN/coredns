@@ -1,0 +1,11 @@
+{
+"Ptr(c00069f250)": {"Root": "c00069f250", "Count": 0, "__type__": "tree.Tree"},
+"Slice(c000528480)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000527560)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0005275c0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000527620)", "__type__": "dns.RR"}],
+"Iface(c000527620)": {"Hdr": {"Name": {"value": "bank.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "campus.example.example.uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c0005275c0)": {"Hdr": {"Name": {"value": "bank.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.bank.net.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "bank.uni.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/11895.txt", "__type__": "string"}, "Tree": "Ptr(c00069f250)", "Apex": {"SOA": "Ptr(c0000a91a0)", "NS": {"ptr": "Slice(c000528480)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c00069f250": "zeroVal",
+"Ptr(c0000a91a0)": {"Hdr": {"Name": {"value": "bank.uni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Iface(c000527560)": {"Hdr": {"Name": {"value": "bank.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "uni.uni.", "__type__": "string"}, "__type__": "dns.NS"}
+}

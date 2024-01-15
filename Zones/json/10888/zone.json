@@ -1,0 +1,11 @@
+{
+"zone": {"Origin": {"value": "campus.example.mybankcard.uni.", "__type__": "string"}, "OrigLen": 4, "File": {"value": "ZoneFiles/10888.txt", "__type__": "string"}, "Tree": "Ptr(c000521320)", "Apex": {"SOA": "Ptr(c0006016e0)", "NS": {"ptr": "Slice(c0002213c0)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c000521320)": {"Root": "c000521320", "Count": 0, "__type__": "tree.Tree"},
+"c000521320": "zeroVal",
+"Iface(c0006c0f30)": {"Hdr": {"Name": {"value": "campus.example.mybankcard.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "*.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c0006016e0)": {"Hdr": {"Name": {"value": "campus.example.mybankcard.uni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0002213c0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0006c0ed0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0006c0f30)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0006c0f90)", "__type__": "dns.RR"}],
+"Iface(c0006c0ed0)": {"Hdr": {"Name": {"value": "campus.example.mybankcard.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0006c0f90)": {"Hdr": {"Name": {"value": "campus.example.mybankcard.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

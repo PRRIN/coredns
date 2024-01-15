@@ -1,0 +1,14 @@
+{
+"Iface(c00061f7d0)": {"Hdr": {"Name": {"value": "www.bar.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "com.campus.mybankcard.bar.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c00061c408": "zeroVal",
+"c00061c410": "zeroVal",
+"Slice(c0002008a0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00061f770)", "__type__": "dns.RR"}],
+"Iface(c00061f770)": {"Hdr": {"Name": {"value": "www.bar.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bar.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c00061c400": {"m": {"39": {"ptr": "Slice(c0002008b0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "www.bar.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Ptr(c000200890)": {"Root": "c000200890", "Count": 1, "__type__": "tree.Tree"},
+"c000200890": {"Elem": "c00061c400", "Left": "c00061c408", "Right": "c00061c410", "Color": 1, "__type__": "tree.Node"},
+"Slice(c0002008b0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c00061f7d0)", "__type__": "dns.RR"}],
+"Ptr(c0000a8d80)": {"Hdr": {"Name": {"value": "www.bar.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"zone": {"Origin": {"value": "www.bar.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/1300.txt", "__type__": "string"}, "Tree": "Ptr(c000200890)", "Apex": {"SOA": "Ptr(c0000a8d80)", "NS": {"ptr": "Slice(c0002008a0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"}
+}

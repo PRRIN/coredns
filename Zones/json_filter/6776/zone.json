@@ -1,0 +1,11 @@
+{
+"Iface(c00062b3b0)": {"Hdr": {"Name": {"value": "example.bankcard.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "www.www.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c0004057a0": "zeroVal",
+"Ptr(c0004ed5c0)": {"Hdr": {"Name": {"value": "example.bankcard.foo.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Iface(c00062b2f0)": {"Hdr": {"Name": {"value": "example.bankcard.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "example.uni.bankcard.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c00062b350)": {"Hdr": {"Name": {"value": "example.bankcard.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "www.foo.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "example.bankcard.foo.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/6776.txt", "__type__": "string"}, "Tree": "Ptr(c0004057a0)", "Apex": {"SOA": "Ptr(c0004ed5c0)", "NS": {"ptr": "Slice(c000555080)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c0004057a0)": {"Root": "c0004057a0", "Count": 0, "__type__": "tree.Tree"},
+"Slice(c000555080)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00062b2f0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00062b350)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00062b3b0)", "__type__": "dns.RR"}]
+}

@@ -1,0 +1,11 @@
+{
+"Ptr(c00028d140)": {"Hdr": {"Name": {"value": "campus.example.net.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0005d2f80)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00052e5d0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00052e630)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00052e690)", "__type__": "dns.RR"}],
+"zone": {"Origin": {"value": "campus.example.net.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/9327.txt", "__type__": "string"}, "Tree": "Ptr(c0004affc0)", "Apex": {"SOA": "Ptr(c00028d140)", "NS": {"ptr": "Slice(c0005d2f80)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c0004affc0)": {"Root": "c0004affc0", "Count": 0, "__type__": "tree.Tree"},
+"Iface(c00052e630)": {"Hdr": {"Name": {"value": "campus.example.net.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.example.net.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c00052e690)": {"Hdr": {"Name": {"value": "campus.example.net.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.example.net.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c0004affc0": "zeroVal",
+"Iface(c00052e5d0)": {"Hdr": {"Name": {"value": "campus.example.net.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "example.bankcard.campus.net.", "__type__": "string"}, "__type__": "dns.NS"}
+}

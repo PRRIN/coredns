@@ -1,0 +1,14 @@
+{
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "example.email.*.uni.", "__type__": "string"}, "OrigLen": 4, "File": {"value": "ZoneFiles/4583.txt", "__type__": "string"}, "Tree": "Ptr(c0004b3a00)", "Apex": {"SOA": "Ptr(c0002bcf60)", "NS": {"ptr": "Slice(c0004b3a10)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c0004b3a00": {"Elem": "c00069e620", "Left": "c00069e628", "Right": "c00069e630", "Color": 1, "__type__": "tree.Node"},
+"c00069e620": {"m": {"39": {"ptr": "Slice(c0004b3a20)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "example.email.*.uni.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Iface(c0006646f0)": {"Hdr": {"Name": {"value": "example.email.*.uni.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "bankcard.bar.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c00069e628": "zeroVal",
+"c00069e630": "zeroVal",
+"Iface(c000664690)": {"Hdr": {"Name": {"value": "example.email.*.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "fnni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c0004b3a00)": {"Root": "c0004b3a00", "Count": 1, "__type__": "tree.Tree"},
+"Slice(c0004b3a20)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0006646f0)", "__type__": "dns.RR"}],
+"Ptr(c0002bcf60)": {"Hdr": {"Name": {"value": "example.email.*.uni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0004b3a10)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000664690)", "__type__": "dns.RR"}]
+}

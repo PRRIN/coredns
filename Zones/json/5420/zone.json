@@ -1,0 +1,21 @@
+{
+"c0005bc6a0": {"m": {"2": {"ptr": "Slice(c0005bc6c0)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "net.net.email.campus.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c0005bc6c0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0006ca930)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0006ca9c0)", "__type__": "dns.RR"}],
+"Ptr(c000699140)": {"Hdr": {"Name": {"value": "email.campus.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Ptr(c000311e30)": {"Root": "c000311e30", "Count": 2, "__type__": "tree.Tree"},
+"Iface(c0006ca930)": {"Hdr": {"Name": {"value": "net.net.email.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "example.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Slice(c000311e40)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0006ca870)", "__type__": "dns.RR"}],
+"c0005bc690": "zeroVal",
+"c0005bc6b0": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c0005bc6a8": {"Elem": "c0005bc680", "Left": "c0005bc688", "Right": "c0005bc690", "Color": 0, "__type__": "tree.Node"},
+"c0005bc680": {"m": {"1": {"ptr": "Slice(c000311e50)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "net.email.campus.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c000311e50)": [{"itab": "Itab(*dns.A)", "data": "Iface(c000223240)", "__type__": "dns.RR"}],
+"Iface(c000223240)": {"Hdr": {"Name": {"value": "net.email.campus.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c0006a59c0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"c0005bc688": "zeroVal",
+"Iface(c0006ca870)": {"Hdr": {"Name": {"value": "email.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "email.campus.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/5420.txt", "__type__": "string"}, "Tree": "Ptr(c000311e30)", "Apex": {"SOA": "Ptr(c000699140)", "NS": {"ptr": "Slice(c000311e40)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c000311e30": {"Elem": "c0005bc6a0", "Left": "c0005bc6a8", "Right": "c0005bc6b0", "Color": 1, "__type__": "tree.Node"},
+"Iface(c0006ca9c0)": {"Hdr": {"Name": {"value": "net.net.email.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.email.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Slice(c0006a59c0)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1]
+}
