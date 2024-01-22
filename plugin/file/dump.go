@@ -86,7 +86,7 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 	case reflect.Pointer:
 		var addr string
 		if val.CanAddr() {
-			if val.UnsafeAddr() == 0 {
+			if val.UnsafeAddr() == 0 || !val.Elem().IsValid() {
 				(*json)[cur] = append((*json)[cur], "\"zeroVal\"")
 				return
 			}
@@ -259,6 +259,8 @@ func dumpReq(r *request.Request) {
 		W:    r.W,
 		Zone: r.Zone,
 
+		// Doing these calls also cache the data,
+		// so that Iceberg can treat Request as constant as well..
 		Size:      uint16(r.Size()),
 		Do:        r.Do(),
 		Family:    int8(r.Family()),
