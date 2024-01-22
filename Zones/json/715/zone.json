@@ -1,0 +1,14 @@
+{
+"Iface(c0008027e0)": {"Hdr": {"Name": {"value": "foo.campus.mybankcard.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c000050ed0)": {"Root": "c000050ed0", "Count": 1, "__type__": "tree.Tree"},
+"c000050ed0": {"Elem": "c0006a65e0", "Left": "c0006a65e8", "Right": "c0006a65f0", "Color": 1, "__type__": "tree.Node"},
+"c0006a65e0": {"m": {"39": {"ptr": "Slice(c000050ef0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "foo.campus.mybankcard.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c000050ef0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c000802840)", "__type__": "dns.RR"}],
+"c0006a65e8": "zeroVal",
+"c0006a65f0": "zeroVal",
+"Ptr(c00013cde0)": {"Hdr": {"Name": {"value": "foo.campus.mybankcard.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"zone": {"Origin": {"value": "foo.campus.mybankcard.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/715.txt", "__type__": "string"}, "Tree": "Ptr(c000050ed0)", "Apex": {"SOA": "Ptr(c00013cde0)", "NS": {"ptr": "Slice(c000050ee0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Iface(c000802840)": {"Hdr": {"Name": {"value": "foo.campus.mybankcard.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "mybankcard.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Slice(c000050ee0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0008027e0)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

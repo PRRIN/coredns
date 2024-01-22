@@ -1,0 +1,19 @@
+{
+"Iface(c00075b050)": {"Hdr": {"Name": {"value": "com.com.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "campus.fnni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c000051230)": {"Root": "c000051230", "Count": 2, "__type__": "tree.Tree"},
+"c000692280": {"m": {"39": {"ptr": "Slice(c000051260)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "net.com.com.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c000692288": {"Elem": "c000692260", "Left": "c000692268", "Right": "c000692270", "Color": 0, "__type__": "tree.Node"},
+"c000692260": {"m": {"2": {"ptr": "Slice(c000051250)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "com.com.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "com.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/8053.txt", "__type__": "string"}, "Tree": "Ptr(c000051230)", "Apex": {"SOA": "Ptr(c000800480)", "NS": {"ptr": "Slice(c000051240)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c000692270": "zeroVal",
+"Slice(c000051240)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00075aff0)", "__type__": "dns.RR"}],
+"Iface(c00075aff0)": {"Hdr": {"Name": {"value": "com.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "mybankcard.bank.email.bar.", "__type__": "string"}, "__type__": "dns.NS"},
+"c000692268": "zeroVal",
+"Slice(c000051260)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c00075b0e0)", "__type__": "dns.RR"}],
+"Iface(c00075b0e0)": {"Hdr": {"Name": {"value": "net.com.com.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "com.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Slice(c000051250)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00075b050)", "__type__": "dns.RR"}],
+"c000692290": "zeroVal",
+"Ptr(c000800480)": {"Hdr": {"Name": {"value": "com.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"c000051230": {"Elem": "c000692280", "Left": "c000692288", "Right": "c000692290", "Color": 1, "__type__": "tree.Node"}
+}

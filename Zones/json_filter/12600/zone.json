@@ -1,0 +1,11 @@
+{
+"zone": {"Origin": {"value": "bankcard.foo.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/12600.txt", "__type__": "string"}, "Tree": "Ptr(c0006acc20)", "Apex": {"SOA": "Ptr(c0007de780)", "NS": {"ptr": "Slice(c00076c400)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c0006acc20)": {"Root": "c0006acc20", "Count": 0, "__type__": "tree.Tree"},
+"Iface(c000641470)": {"Hdr": {"Name": {"value": "bankcard.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bank.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0006acc20": "zeroVal",
+"Ptr(c0007de780)": {"Hdr": {"Name": {"value": "bankcard.foo.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c00076c400)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0006413b0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000641410)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000641470)", "__type__": "dns.RR"}],
+"Iface(c0006413b0)": {"Hdr": {"Name": {"value": "bankcard.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "email.www.foo.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c000641410)": {"Hdr": {"Name": {"value": "bankcard.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.mybankcard.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

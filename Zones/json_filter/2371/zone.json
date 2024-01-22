@@ -1,0 +1,11 @@
+{
+"c00038bc20": "zeroVal",
+"Slice(c000065180)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000740720)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000740780)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0007407e0)", "__type__": "dns.RR"}],
+"Iface(c000740780)": {"Hdr": {"Name": {"value": "uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.*.uni.mybankcard.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0007407e0)": {"Hdr": {"Name": {"value": "uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.uni.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "uni.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/2371.txt", "__type__": "string"}, "Tree": "Ptr(c00038bc20)", "Apex": {"SOA": "Ptr(c000712d80)", "NS": {"ptr": "Slice(c000065180)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c00038bc20)": {"Root": "c00038bc20", "Count": 0, "__type__": "tree.Tree"},
+"Ptr(c000712d80)": {"Hdr": {"Name": {"value": "uni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Iface(c000740720)": {"Hdr": {"Name": {"value": "uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "email.fnni.", "__type__": "string"}, "__type__": "dns.NS"}
+}

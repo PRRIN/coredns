@@ -1,0 +1,22 @@
+{
+"Slice(c0000514a0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007d43c0)", "__type__": "dns.RR"}],
+"Slice(c000051490)": [{"itab": "Itab(*dns.AAAA)", "data": "Iface(c00069cd40)", "__type__": "dns.RR"}],
+"Slice(c000051480)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007d4300)", "__type__": "dns.RR"}],
+"c0000a7e90": "zeroVal",
+"Iface(c0007d42a0)": {"Hdr": {"Name": {"value": "fnni.foo.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c000051460)": {"Root": "c000051460", "Count": 2, "__type__": "tree.Tree"},
+"c0000a7e68": "zeroVal",
+"c0000a7e70": "zeroVal",
+"Ptr(c0001b5800)": {"Hdr": {"Name": {"value": "fnni.foo.campus.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"c000051460": {"Elem": "c0000a7e80", "Left": "c0000a7e88", "Right": "c0000a7e90", "Color": 1, "__type__": "tree.Node"},
+"Iface(c0007d43c0)": {"Hdr": {"Name": {"value": "uni.fnni.foo.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.foo.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0007d4300)": {"Hdr": {"Name": {"value": "bankcard.fnni.foo.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bankcard.fnni.foo.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "fnni.foo.campus.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/10262.txt", "__type__": "string"}, "Tree": "Ptr(c000051460)", "Apex": {"SOA": "Ptr(c0001b5800)", "NS": {"ptr": "Slice(c000051470)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c0000a7e80": {"m": {"2": {"ptr": "Slice(c0000514a0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "uni.fnni.foo.campus.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c0000a7e88": {"Elem": "c0000a7e60", "Left": "c0000a7e68", "Right": "c0000a7e70", "Color": 0, "__type__": "tree.Node"},
+"c0000a7e60": {"m": {"28": {"ptr": "Slice(c000051490)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "2": {"ptr": "Slice(c000051480)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "bankcard.fnni.foo.campus.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Iface(c00069cd40)": {"Hdr": {"Name": {"value": "bankcard.fnni.foo.campus.", "__type__": "string"}, "Rrtype": 28, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "AAAA": {"ptr": "Slice(c0001196c0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.AAAA"},
+"Slice(c0001196c0)": [36, 0, 203, 0, 32, 73, 0, 1, 0, 0, 0, 0, 162, 159, 24, 4],
+"Slice(c000051470)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007d42a0)", "__type__": "dns.RR"}]
+}

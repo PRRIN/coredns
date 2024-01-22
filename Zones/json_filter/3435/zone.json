@@ -1,0 +1,14 @@
+{
+"zone": {"Origin": {"value": "bar.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/3435.txt", "__type__": "string"}, "Tree": "Ptr(c000610600)", "Apex": {"SOA": "Ptr(c0008362a0)", "NS": {"ptr": "Slice(c000610610)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c000610600)": {"Root": "c000610600", "Count": 1, "__type__": "tree.Tree"},
+"Slice(c000610620)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00078f230)", "__type__": "dns.RR"}],
+"Iface(c00078f230)": {"Hdr": {"Name": {"value": "com.bar.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bar.*.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0007942c8": "zeroVal",
+"Iface(c00078f1d0)": {"Hdr": {"Name": {"value": "bar.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.bankcard.bankcard.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"c000610600": {"Elem": "c0007942c0", "Left": "c0007942c8", "Right": "c0007942d0", "Color": 1, "__type__": "tree.Node"},
+"c0007942c0": {"m": {"2": {"ptr": "Slice(c000610620)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "com.bar.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c0007942d0": "zeroVal",
+"Ptr(c0008362a0)": {"Hdr": {"Name": {"value": "bar.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c000610610)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00078f1d0)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

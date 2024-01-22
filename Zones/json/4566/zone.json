@@ -1,0 +1,15 @@
+{
+"zone": {"Origin": {"value": "net.net.com.com.", "__type__": "string"}, "OrigLen": 4, "File": {"value": "ZoneFiles/4566.txt", "__type__": "string"}, "Tree": "Ptr(c00038bb20)", "Apex": {"SOA": "Ptr(c00058ef60)", "NS": {"ptr": "Slice(c00038bb30)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c00038bb20": {"Elem": "c00079a580", "Left": "c00079a588", "Right": "c00079a590", "Color": 1, "__type__": "tree.Node"},
+"Slice(c00051bad0)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1],
+"Ptr(c00058ef60)": {"Hdr": {"Name": {"value": "net.net.com.com.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c00038bb30)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00077e3f0)", "__type__": "dns.RR"}],
+"c00079a580": {"m": {"1": {"ptr": "Slice(c00038bb40)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "net.net.com.com.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Iface(c00052ecc0)": {"Hdr": {"Name": {"value": "net.net.com.com.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c00051bad0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"Ptr(c00038bb20)": {"Root": "c00038bb20", "Count": 1, "__type__": "tree.Tree"},
+"Slice(c00038bb40)": [{"itab": "Itab(*dns.A)", "data": "Iface(c00052ecc0)", "__type__": "dns.RR"}],
+"c00079a590": "zeroVal",
+"Iface(c00077e3f0)": {"Hdr": {"Name": {"value": "net.net.com.com.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.foo.", "__type__": "string"}, "__type__": "dns.NS"},
+"c00079a588": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

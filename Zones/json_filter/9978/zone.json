@@ -1,0 +1,18 @@
+{
+"zone": {"Origin": {"value": "foo.example.example.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/9978.txt", "__type__": "string"}, "Tree": "Ptr(c0005b7430)", "Apex": {"SOA": "Ptr(c00013cae0)", "NS": {"ptr": "Slice(c0005b7440)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Iface(c0007fc450)": {"Hdr": {"Name": {"value": "fnni.foo.example.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "fnni.foo.example.example.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0006b0550": "zeroVal",
+"Iface(c0007fc3f0)": {"Hdr": {"Name": {"value": "foo.example.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c0005b7430)": {"Root": "c0005b7430", "Count": 1, "__type__": "tree.Tree"},
+"Iface(c00059ebc0)": {"Hdr": {"Name": {"value": "fnni.foo.example.example.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c000533b10)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c0005b7430": {"Elem": "c0006b0540", "Left": "c0006b0548", "Right": "c0006b0550", "Color": 1, "__type__": "tree.Node"},
+"c0006b0540": {"m": {"2": {"ptr": "Slice(c0006b0560)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "1": {"ptr": "Slice(c0005b7460)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "fnni.foo.example.example.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c0006b0560)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007fc450)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0007fc4e0)", "__type__": "dns.RR"}],
+"Iface(c0007fc4e0)": {"Hdr": {"Name": {"value": "fnni.foo.example.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "*.foo.*.example.", "__type__": "string"}, "__type__": "dns.NS"},
+"Slice(c0005b7460)": [{"itab": "Itab(*dns.A)", "data": "Iface(c00059ebc0)", "__type__": "dns.RR"}],
+"Slice(c000533b10)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1],
+"c0006b0548": "zeroVal",
+"Ptr(c00013cae0)": {"Hdr": {"Name": {"value": "foo.example.example.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0005b7440)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007fc3f0)", "__type__": "dns.RR"}]
+}

@@ -1,0 +1,14 @@
+{
+"c0005465c0": {"m": {"39": {"ptr": "Slice(c0005a19c0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "campus.uni.uni.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Iface(c0007fc7e0)": {"Hdr": {"Name": {"value": "campus.uni.uni.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "uni.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Ptr(c0000a90e0)": {"Hdr": {"Name": {"value": "campus.uni.uni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0005a19b0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007fc780)", "__type__": "dns.RR"}],
+"Iface(c0007fc780)": {"Hdr": {"Name": {"value": "campus.uni.uni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"c0005465d0": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "campus.uni.uni.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/2553.txt", "__type__": "string"}, "Tree": "Ptr(c0005a19a0)", "Apex": {"SOA": "Ptr(c0000a90e0)", "NS": {"ptr": "Slice(c0005a19b0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c0005a19a0)": {"Root": "c0005a19a0", "Count": 1, "__type__": "tree.Tree"},
+"c0005a19a0": {"Elem": "c0005465c0", "Left": "c0005465c8", "Right": "c0005465d0", "Color": 1, "__type__": "tree.Node"},
+"Slice(c0005a19c0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0007fc7e0)", "__type__": "dns.RR"}],
+"c0005465c8": "zeroVal"
+}

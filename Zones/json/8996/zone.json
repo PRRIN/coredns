@@ -1,0 +1,17 @@
+{
+"zone": {"Origin": {"value": "fnni.com.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/8996.txt", "__type__": "string"}, "Tree": "Ptr(c00054e740)", "Apex": {"SOA": "Ptr(c0008421e0)", "NS": {"ptr": "Slice(c00054e750)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c00054e740)": {"Root": "c00054e740", "Count": 1, "__type__": "tree.Tree"},
+"c00054e740": {"Elem": "c000692360", "Left": "c000692368", "Right": "c000692370", "Color": 1, "__type__": "tree.Node"},
+"Slice(c00054e770)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c00068f5c0)", "__type__": "dns.RR"}],
+"Iface(c00068f5c0)": {"Hdr": {"Name": {"value": "fnni.com.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "email.fnni.bankcard.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"c000692370": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Slice(c00054e760)": [{"itab": "Itab(*dns.A)", "data": "Iface(c000694480)", "__type__": "dns.RR"}],
+"Iface(c000694480)": {"Hdr": {"Name": {"value": "fnni.com.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c000013d90)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"Ptr(c0008421e0)": {"Hdr": {"Name": {"value": "fnni.com.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Iface(c00068f500)": {"Hdr": {"Name": {"value": "fnni.com.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.", "__type__": "string"}, "__type__": "dns.NS"},
+"c000692360": {"m": {"1": {"ptr": "Slice(c00054e760)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "39": {"ptr": "Slice(c00054e770)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "fnni.com.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c000013d90)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1],
+"c000692368": "zeroVal",
+"Slice(c00054e750)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00068f500)", "__type__": "dns.RR"}]
+}

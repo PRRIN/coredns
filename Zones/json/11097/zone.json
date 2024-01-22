@@ -1,0 +1,15 @@
+{
+"Ptr(c0006b47c0)": {"Root": "c0006b47c0", "Count": 1, "__type__": "tree.Tree"},
+"c0006b47c0": {"Elem": "c0000a64c0", "Left": "c0000a64c8", "Right": "c0000a64d0", "Color": 1, "__type__": "tree.Node"},
+"Slice(c0006b47e0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c000729620)", "__type__": "dns.RR"}],
+"c0000a64d0": "zeroVal",
+"Iface(c000729560)": {"Hdr": {"Name": {"value": "foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "fnni.com.fnni.www.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0007295c0)": {"Hdr": {"Name": {"value": "foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.email.bankcard.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "foo.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/11097.txt", "__type__": "string"}, "Tree": "Ptr(c0006b47c0)", "Apex": {"SOA": "Ptr(c0000a8a80)", "NS": {"ptr": "Slice(c0000a6480)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c0000a64c0": {"m": {"39": {"ptr": "Slice(c0006b47e0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "foo.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Iface(c000729620)": {"Hdr": {"Name": {"value": "foo.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "email.email.foo.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Slice(c0000a6480)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000729560)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0007295c0)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"c0000a64c8": "zeroVal",
+"Ptr(c0000a8a80)": {"Hdr": {"Name": {"value": "foo.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"}
+}

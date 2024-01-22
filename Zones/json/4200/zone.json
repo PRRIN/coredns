@@ -1,0 +1,11 @@
+{
+"zone": {"Origin": {"value": "uni.mybankcard.com.example.", "__type__": "string"}, "OrigLen": 4, "File": {"value": "ZoneFiles/4200.txt", "__type__": "string"}, "Tree": "Ptr(c0005574b0)", "Apex": {"SOA": "Ptr(c00013d440)", "NS": {"ptr": "Slice(c0000d4fc0)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c0005574b0)": {"Root": "c0005574b0", "Count": 0, "__type__": "tree.Tree"},
+"c0005574b0": "zeroVal",
+"Ptr(c00013d440)": {"Hdr": {"Name": {"value": "uni.mybankcard.com.example.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c0000d4fc0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000830570)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0008305d0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000830630)", "__type__": "dns.RR"}],
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c000830570)": {"Hdr": {"Name": {"value": "uni.mybankcard.com.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "mybankcard.campus.uni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0008305d0)": {"Hdr": {"Name": {"value": "uni.mybankcard.com.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "email.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c000830630)": {"Hdr": {"Name": {"value": "uni.mybankcard.com.example.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.foo.", "__type__": "string"}, "__type__": "dns.NS"}
+}

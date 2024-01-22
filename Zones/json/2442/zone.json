@@ -1,0 +1,15 @@
+{
+"c00013e6d0": {"Elem": "c00047c420", "Left": "c00047c428", "Right": "c00047c430", "Color": 1, "__type__": "tree.Node"},
+"Ptr(c00029aea0)": {"Hdr": {"Name": {"value": "com.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c00047c400)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00046b740)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00046b7a0)", "__type__": "dns.RR"}],
+"Iface(c00046b800)": {"Hdr": {"Name": {"value": "com.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "foo.email.com.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Ptr(c00013e6d0)": {"Root": "c00013e6d0", "Count": 1, "__type__": "tree.Tree"},
+"c00047c420": {"m": {"39": {"ptr": "Slice(c00013e6f0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "com.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c00013e6f0)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c00046b800)", "__type__": "dns.RR"}],
+"c00047c428": "zeroVal",
+"Iface(c00046b740)": {"Hdr": {"Name": {"value": "com.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "fnni.bank.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c00046b7a0)": {"Hdr": {"Name": {"value": "com.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "email.bank.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "com.", "__type__": "string"}, "OrigLen": 1, "File": {"value": "ZoneFiles/2442.txt", "__type__": "string"}, "Tree": "Ptr(c00013e6d0)", "Apex": {"SOA": "Ptr(c00029aea0)", "NS": {"ptr": "Slice(c00047c400)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c00047c430": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

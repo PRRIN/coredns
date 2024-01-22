@@ -1,0 +1,11 @@
+{
+"Slice(c0007ec400)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000745470)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0007454d0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000745530)", "__type__": "dns.RR"}],
+"Iface(c000745530)": {"Hdr": {"Name": {"value": "net.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bar.uni.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c000745470)": {"Hdr": {"Name": {"value": "net.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.bar.example.email.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0007454d0)": {"Hdr": {"Name": {"value": "net.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.bar.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "net.campus.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/11913.txt", "__type__": "string"}, "Tree": "Ptr(c00058ea40)", "Apex": {"SOA": "Ptr(c000780780)", "NS": {"ptr": "Slice(c0007ec400)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c00058ea40)": {"Root": "c00058ea40", "Count": 0, "__type__": "tree.Tree"},
+"c00058ea40": "zeroVal",
+"Ptr(c000780780)": {"Hdr": {"Name": {"value": "net.campus.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"}
+}

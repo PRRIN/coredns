@@ -1,0 +1,18 @@
+{
+"Ptr(c0001242d0)": {"Root": "c0001242d0", "Count": 1, "__type__": "tree.Tree"},
+"c0005200e8": "zeroVal",
+"c0005200f0": "zeroVal",
+"Slice(c0001242f0)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000612900)", "__type__": "dns.RR"}],
+"c0001242d0": {"Elem": "c0005200e0", "Left": "c0005200e8", "Right": "c0005200f0", "Color": 1, "__type__": "tree.Node"},
+"c0005200e0": {"m": {"2": {"ptr": "Slice(c000520100)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "1": {"ptr": "Slice(c000124330)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "uni.bankcard.example.foo.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c000124330)": [{"itab": "Itab(*dns.A)", "data": "Iface(c000286100)", "__type__": "dns.RR"}],
+"Ptr(c00053e600)": {"Hdr": {"Name": {"value": "bankcard.example.foo.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"zone": {"Origin": {"value": "bankcard.example.foo.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/7684.txt", "__type__": "string"}, "Tree": "Ptr(c0001242d0)", "Apex": {"SOA": "Ptr(c00053e600)", "NS": {"ptr": "Slice(c0001242f0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Slice(c000520100)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000612960)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0006129f0)", "__type__": "dns.RR"}],
+"Iface(c000612960)": {"Hdr": {"Name": {"value": "uni.bankcard.example.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "example.foo.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0006129f0)": {"Hdr": {"Name": {"value": "uni.bankcard.example.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "uni.bankcard.example.foo.", "__type__": "string"}, "__type__": "dns.NS"},
+"Slice(c000012ff0)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 1, 1, 1],
+"Iface(c000612900)": {"Hdr": {"Name": {"value": "bankcard.example.foo.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c000286100)": {"Hdr": {"Name": {"value": "uni.bankcard.example.foo.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c000012ff0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"}
+}

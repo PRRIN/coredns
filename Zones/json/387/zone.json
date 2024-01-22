@@ -1,0 +1,23 @@
+{
+"Slice(c00067d160)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0002954d0)", "__type__": "dns.RR"}],
+"Slice(c00003c450)": [36, 0, 203, 0, 32, 73, 0, 1, 0, 0, 0, 0, 162, 159, 24, 4],
+"c0004ba368": {"Elem": "c0004ba340", "Left": "c0004ba348", "Right": "c0004ba350", "Color": 0, "__type__": "tree.Node"},
+"c0004ba340": {"m": {"28": {"ptr": "Slice(c00067d150)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "www.bank.campus.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c00003c3e0)": [32, 1, 13, 184, 133, 163, 0, 0, 0, 0, 138, 46, 3, 112, 115, 52],
+"c0004ba370": "zeroVal",
+"Slice(c00067d140)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000295410)", "__type__": "dns.RR"}],
+"c00067d130": {"Elem": "c0004ba360", "Left": "c0004ba368", "Right": "c0004ba370", "Color": 1, "__type__": "tree.Node"},
+"c0004ba360": {"m": {"2": {"ptr": "Slice(c00067d160)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "28": {"ptr": "Slice(c00067d170)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "bank.www.bank.campus.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c00067d170)": [{"itab": "Itab(*dns.AAAA)", "data": "Iface(c000222780)", "__type__": "dns.RR"}],
+"Iface(c000222780)": {"Hdr": {"Name": {"value": "bank.www.bank.campus.", "__type__": "string"}, "Rrtype": 28, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "AAAA": {"ptr": "Slice(c00003c450)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.AAAA"},
+"Slice(c00067d150)": [{"itab": "Itab(*dns.AAAA)", "data": "Iface(c000222740)", "__type__": "dns.RR"}],
+"Iface(c000295410)": {"Hdr": {"Name": {"value": "bank.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c00084c0c0)": {"Hdr": {"Name": {"value": "bank.campus.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "bank.campus.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/387.txt", "__type__": "string"}, "Tree": "Ptr(c00067d130)", "Apex": {"SOA": "Ptr(c00084c0c0)", "NS": {"ptr": "Slice(c00067d140)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c00067d130)": {"Root": "c00067d130", "Count": 2, "__type__": "tree.Tree"},
+"Iface(c0002954d0)": {"Hdr": {"Name": {"value": "bank.www.bank.campus.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bank.email.com.campus.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c000222740)": {"Hdr": {"Name": {"value": "www.bank.campus.", "__type__": "string"}, "Rrtype": 28, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "AAAA": {"ptr": "Slice(c00003c3e0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.AAAA"},
+"c0004ba348": "zeroVal",
+"c0004ba350": "zeroVal"
+}

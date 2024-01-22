@@ -1,0 +1,15 @@
+{
+"Ptr(c000311c50)": {"Root": "c000311c50", "Count": 1, "__type__": "tree.Tree"},
+"c000568040": {"m": {"39": {"ptr": "Slice(c000311c70)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "fnni.email.fnni.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c000568050": "zeroVal",
+"Slice(c000568020)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0004b2e70)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0004b2ed0)", "__type__": "dns.RR"}],
+"Iface(c0004b2e70)": {"Hdr": {"Name": {"value": "fnni.email.fnni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.mybankcard.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "fnni.email.fnni.", "__type__": "string"}, "OrigLen": 3, "File": {"value": "ZoneFiles/9321.txt", "__type__": "string"}, "Tree": "Ptr(c000311c50)", "Apex": {"SOA": "Ptr(c00010f4a0)", "NS": {"ptr": "Slice(c000568020)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c000311c50": {"Elem": "c000568040", "Left": "c000568048", "Right": "c000568050", "Color": 1, "__type__": "tree.Node"},
+"Slice(c000311c70)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0004b2f30)", "__type__": "dns.RR"}],
+"Iface(c0004b2ed0)": {"Hdr": {"Name": {"value": "fnni.email.fnni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "fnni.email.email.fnni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0004b2f30)": {"Hdr": {"Name": {"value": "fnni.email.fnni.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "fnni.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Ptr(c00010f4a0)": {"Hdr": {"Name": {"value": "fnni.email.fnni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"c000568048": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"}
+}

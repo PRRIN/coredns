@@ -1,0 +1,11 @@
+{
+"Iface(c00074df20)": {"Hdr": {"Name": {"value": "email.mybankcard.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "net.email.bar.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "email.mybankcard.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/11872.txt", "__type__": "string"}, "Tree": "Ptr(c00002ad50)", "Apex": {"SOA": "Ptr(c00080a840)", "NS": {"ptr": "Slice(c000888540)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c00002ad50": "zeroVal",
+"Ptr(c00080a840)": {"Hdr": {"Name": {"value": "email.mybankcard.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c000888540)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c00074de60)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00074dec0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c00074df20)", "__type__": "dns.RR"}],
+"Iface(c00074dec0)": {"Hdr": {"Name": {"value": "email.mybankcard.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "email.bar.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c00002ad50)": {"Root": "c00002ad50", "Count": 0, "__type__": "tree.Tree"},
+"Iface(c00074de60)": {"Hdr": {"Name": {"value": "email.mybankcard.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "mybankcard.", "__type__": "string"}, "__type__": "dns.NS"}
+}

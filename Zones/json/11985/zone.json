@@ -1,0 +1,11 @@
+{
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"zone": {"Origin": {"value": "foo.www.foo.fnni.", "__type__": "string"}, "OrigLen": 4, "File": {"value": "ZoneFiles/11985.txt", "__type__": "string"}, "Tree": "Ptr(c00012ad80)", "Apex": {"SOA": "Ptr(c00064d2c0)", "NS": {"ptr": "Slice(c000599180)", "len": 3, "cap": 4, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Ptr(c00012ad80)": {"Root": "c00012ad80", "Count": 0, "__type__": "tree.Tree"},
+"c00012ad80": "zeroVal",
+"Ptr(c00064d2c0)": {"Hdr": {"Name": {"value": "foo.www.foo.fnni.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c000599180)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c000542540)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0005425a0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000542600)", "__type__": "dns.RR"}],
+"Iface(c000542540)": {"Hdr": {"Name": {"value": "foo.www.foo.fnni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "com.foo.fnni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c0005425a0)": {"Hdr": {"Name": {"value": "foo.www.foo.fnni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "fnni.", "__type__": "string"}, "__type__": "dns.NS"},
+"Iface(c000542600)": {"Hdr": {"Name": {"value": "foo.www.foo.fnni.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "foo.com.mybankcard.fnni.", "__type__": "string"}, "__type__": "dns.NS"}
+}

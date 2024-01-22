@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 "zone": {"Origin": {"value": "example.org.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "db.example.org", "__type__": "string"}, "Tree": "Ptr(400059c940)", "Apex": {"SOA": "Ptr(4000624960)", "NS": {"ptr": "Slice(4000502400)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(34af0a0)", "__type__": "file._Zone"},
 "Iface(4000505830)": {"Hdr": {"Name": {"value": "example.org.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "a.iana-servers.net.", "__type__": "string"}, "__type__": "dns.NS"},
 "4000502420": {"m": {"1": {"ptr": "Slice(400059c960)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "www.example.org.", "__type__": "string"}, "__type__": "tree.Elem"},
@@ -16,4 +17,26 @@
 "4000502428": {"Elem": "4000502440", "Left": "zeroVal", "Right": "zeroVal", "Color": 0, "__type__": "tree.Node"},
 "Iface(40000545c0)": {"Hdr": {"Name": {"value": "mail.example.org.", "__type__": "string"}, "Rrtype": 28, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "AAAA": {"ptr": "Slice(4000101660)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.AAAA"},
 "Ptr(4000624960)": {"Hdr": {"Name": {"value": "example.org.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "sns.dns.icann.org.", "__type__": "string"}, "Mbox": {"value": "noc.dns.icann.org.", "__type__": "string"}, "Serial": 2017042745, "Refresh": 7200, "Retry": 3600, "Expire": 1209600, "Minttl": 3600, "__type__": "dns.SOA"}
+=======
+"Ptr(c0007e0960)": {"Hdr": {"Name": {"value": "example.org.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "sns.dns.icann.org.", "__type__": "string"}, "Mbox": {"value": "noc.dns.icann.org.", "__type__": "string"}, "Serial": 2017042745, "Refresh": 7200, "Retry": 3600, "Expire": 1209600, "Minttl": 3600, "__type__": "dns.SOA"},
+"c000186420": {"m": {"1": {"ptr": "Slice(c000548790)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "www.example.org.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c000548790)": [{"itab": "Itab(*dns.A)", "data": "Iface(c0001884c0)", "__type__": "dns.RR"}],
+"c000186428": {"Elem": "c000186440", "Left": "c000186448", "Right": "c000186450", "Color": 0, "__type__": "tree.Node"},
+"Iface(c000188500)": {"Hdr": {"Name": {"value": "mail.example.org.", "__type__": "string"}, "Rrtype": 28, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "AAAA": {"ptr": "Slice(c0004df4f0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.AAAA"},
+"c000186448": "zeroVal",
+"c000186450": "zeroVal",
+"c000186430": "zeroVal",
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c0001884c0)": {"Hdr": {"Name": {"value": "www.example.org.", "__type__": "string"}, "Rrtype": 1, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "A": {"ptr": "Slice(c0004df4c0)", "len": 16, "cap": 16, "__type__": "net.IP"}, "__type__": "dns.A"},
+"Slice(c000186400)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0001336b0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c000133710)", "__type__": "dns.RR"}],
+"Iface(c000133710)": {"Hdr": {"Name": {"value": "example.org.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "b.iana-servers.net.", "__type__": "string"}, "__type__": "dns.NS"},
+"zone": {"Origin": {"value": "example.org.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "db.example.org", "__type__": "string"}, "Tree": "Ptr(c000548770)", "Apex": {"SOA": "Ptr(c0007e0960)", "NS": {"ptr": "Slice(c000186400)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"c000186440": {"m": {"28": {"ptr": "Slice(c0005487a0)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "mail.example.org.", "__type__": "string"}, "__type__": "tree.Elem"},
+"Slice(c0005487a0)": [{"itab": "Itab(*dns.AAAA)", "data": "Iface(c000188500)", "__type__": "dns.RR"}],
+"Ptr(c000548770)": {"Root": "c000548770", "Count": 2, "__type__": "tree.Tree"},
+"c000548770": {"Elem": "c000186420", "Left": "c000186428", "Right": "c000186430", "Color": 1, "__type__": "tree.Node"},
+"Slice(c0004df4c0)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 127, 0, 0, 1],
+"Slice(c0004df4f0)": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+"Iface(c0001336b0)": {"Hdr": {"Name": {"value": "example.org.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 3600, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "a.iana-servers.net.", "__type__": "string"}, "__type__": "dns.NS"}
+>>>>>>> 6d64b3a47c835fb20f6b94ba98916fdd7451111e
 }

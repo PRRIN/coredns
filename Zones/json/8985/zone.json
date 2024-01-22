@@ -1,0 +1,15 @@
+{
+"c000403630": {"Elem": "c000588580", "Left": "c000588588", "Right": "c000588590", "Color": 1, "__type__": "tree.Node"},
+"Iface(c0007c23c0)": {"Hdr": {"Name": {"value": "email.bank.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "bank.", "__type__": "string"}, "__type__": "dns.NS"},
+"c000588588": "zeroVal",
+"zone": {"Origin": {"value": "email.bank.", "__type__": "string"}, "OrigLen": 2, "File": {"value": "ZoneFiles/8985.txt", "__type__": "string"}, "Tree": "Ptr(c000403630)", "Apex": {"SOA": "Ptr(c0001b5380)", "NS": {"ptr": "Slice(c000588560)", "len": 2, "cap": 2, "__type__": "[]dns.RR"}, "SIGSOA": "zeroVal", "SIGNS": "zeroVal", "__type__": "file.Apex"}, "Expired": 0, "Lock": {"__type__": "struct {}"}, "StartupOnce": {"__type__": "struct {}"}, "TransferFrom": "zeroVal", "ReloadInterval": 60000000000, "ReloadShutdown": {"__type__": "struct {}"}, "Upstream": "Ptr(3a25f80)", "__type__": "file._Zone"},
+"Slice(c000403650)": [{"itab": "Itab(*dns.DNAME)", "data": "Iface(c0007c2480)", "__type__": "dns.RR"}],
+"Iface(c0007c2480)": {"Hdr": {"Name": {"value": "email.bank.", "__type__": "string"}, "Rrtype": 39, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Target": {"value": "com.www.email.bank.", "__type__": "string"}, "__type__": "dns.DNAME"},
+"Ptr(3a25f80)": {"__type__": "upstream.Upstream"},
+"Iface(c0007c2420)": {"Hdr": {"Name": {"value": "email.bank.", "__type__": "string"}, "Rrtype": 2, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "campus.uni.bank.", "__type__": "string"}, "__type__": "dns.NS"},
+"Ptr(c000403630)": {"Root": "c000403630", "Count": 1, "__type__": "tree.Tree"},
+"c000588580": {"m": {"39": {"ptr": "Slice(c000403650)", "len": 1, "cap": 1, "__type__": "[]dns.RR"}, "__type__": "map[uint16][]dns.RR"}, "name": {"value": "email.bank.", "__type__": "string"}, "__type__": "tree.Elem"},
+"c000588590": "zeroVal",
+"Ptr(c0001b5380)": {"Hdr": {"Name": {"value": "email.bank.", "__type__": "string"}, "Rrtype": 6, "Class": 1, "Ttl": 500, "Rdlength": 0, "__type__": "dns.RR_Header"}, "Ns": {"value": "ns1.outside.edu.", "__type__": "string"}, "Mbox": {"value": "root.campus.edu.", "__type__": "string"}, "Serial": 3, "Refresh": 604800, "Retry": 86400, "Expire": 2419200, "Minttl": 604800, "__type__": "dns.SOA"},
+"Slice(c000588560)": [{"itab": "Itab(*dns.NS)", "data": "Iface(c0007c23c0)", "__type__": "dns.RR"}, {"itab": "Itab(*dns.NS)", "data": "Iface(c0007c2420)", "__type__": "dns.RR"}]
+}
