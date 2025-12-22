@@ -1,6 +1,7 @@
 package file
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"reflect"
@@ -32,7 +33,17 @@ type _Zone struct {
 	Upstream *upstream.Upstream
 }
 
+type _File struct {
+	_Zones
+}
+
+type _Zones struct {
+	Z []*_Zone
+}
+
 func dump(val reflect.Value, json *map[string][]string, cur string) {
+
+	// fmt.Printf("dumping %s(%s)\n", val, val.Kind())
 
 	switch val.Kind() {
 	case reflect.Bool:
@@ -92,7 +103,12 @@ func dump(val reflect.Value, json *map[string][]string, cur string) {
 			}
 			addr = fmt.Sprintf("\"%x\"", val.UnsafeAddr())
 		} else {
-			addr = fmt.Sprintf("\"Ptr(%x)\"", val.Elem().UnsafeAddr())
+			if val.IsZero() {
+				(*json)[cur] = append((*json)[cur], "\"zeroVal\"")
+				return
+			} else {
+				addr = fmt.Sprintf("\"Ptr(%x)\"", val.Elem().UnsafeAddr())
+			}
 		}
 		(*json)[cur] = append((*json)[cur], addr)
 		if _, ok := (*json)[addr]; ok {
@@ -194,39 +210,53 @@ func writeJsonFile(name string, json map[string][]string) {
 	file.WriteString("\n}")
 }
 
-func dumpZone(z *Zone) {
+func dumpFile(file *File) {
 
 	// Make sure to call Elem.Name() on all Elems at least once.
 	// This causes the Elem to cache its name, which would otherwise lead to
 	// non-constant dataplane for Iceberg.
-	z.Walk(func(e *tree.Elem, rr map[uint16][]dns.RR) error {
-		e.Name()
-		return nil
-	})
-
-	// Dump the zone
-	_z := _Zone{
-		Origin:         z.origin,
-		OrigLen:        z.origLen,
-		File:           z.file,
-		Tree:           z.Tree,
-		Apex:           z.Apex,
-		Expired:        z.Expired,
-		Lock:           struct{}{},
-		StartupOnce:    struct{}{},
-		TransferFrom:   z.TransferFrom,
-		ReloadInterval: z.ReloadInterval,
-		ReloadShutdown: struct{}{},
-		Upstream:       z.Upstream,
+	Z := make([]*_Zone, 0)
+	for zname := range file.Zones.Z {
+		// elem, _ := file.Zones.Z[zname].Tree.Prev("x.y.c.")
+		// fmt.Printf("Prev(%s): %s\n", "x.y.c.", elem.Name())
+		// root := file.Zones.Z[zname].Root
+		// fmt.Printf("%p, left: %p, right: %p\n", root, root.Left, root.Right)
+		file.Zones.Z[zname].Walk(func(e *tree.Elem, rr map[uint16][]dns.RR) error {
+			e.Name()
+			return nil
+		})
+		z := file.Zones.Z[zname]
+		_z := new(_Zone)
+		*_z = _Zone{
+			Origin:         z.origin,
+			OrigLen:        z.origLen,
+			File:           z.file,
+			Tree:           z.Tree,
+			Apex:           z.Apex,
+			Expired:        z.Expired,
+			Lock:           struct{}{},
+			StartupOnce:    struct{}{},
+			TransferFrom:   z.TransferFrom,
+			ReloadInterval: z.ReloadInterval,
+			ReloadShutdown: struct{}{},
+			Upstream:       z.Upstream,
+		}
+		Z = append(Z, _z)
 	}
 
-	fmt.Println("dumping zone...")
+	// Dump the file
+	_f := _File{
+		_Zones: _Zones{
+			Z: Z,
+		},
+	}
+
+	fmt.Println("dumping File...")
 
 	json := make(map[string][]string)
-	json["\"zone\""] = make([]string, 0)
-	dump(reflect.ValueOf(_z), &json, "\"zone\"")
-
-	writeJsonFile("zone.json", json)
+	json["\"file\""] = make([]string, 0)
+	dump(reflect.ValueOf(_f), &json, "\"file\"")
+	writeJsonFile("file.json", json)
 }
 
 type _Request struct {
@@ -252,7 +282,7 @@ type _Request struct {
 
 func dumpReq(r *request.Request) {
 
-	fmt.Println("dumping request...")
+	fmt.Println("dumping Request...")
 
 	_r := _Request{
 		Req:  r.Req,
@@ -277,4 +307,16 @@ func dumpReq(r *request.Request) {
 
 	// Write
 	writeJsonFile("request.json", json)
+}
+
+func dumpCtx(ctx context.Context) {
+
+	fmt.Println("dumping Context...")
+
+	json := make(map[string][]string)
+	json["\"context\""] = make([]string, 0)
+	dump(reflect.ValueOf(ctx), &json, "\"context\"")
+
+	// Write
+	writeJsonFile("context.json", json)
 }

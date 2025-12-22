@@ -150,10 +150,5 @@ func fileParse(c *caddy.Controller) (Zones, error) {
 		log.Warningf("Failed to open %q: trying again in %s", openErr, reload)
 	}
 
-	for zname := range z {
-		dumpZone(z[zname])
-		break
-	}
-
 	return Zones{Z: z, Names: names}, nil
 }

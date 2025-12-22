@@ -2,6 +2,6 @@
     whoami
 }
 
-example.org:1053 {
-    file db.example.org
+a.:1053 {
+    file Zones/Manual/0.txt
 }

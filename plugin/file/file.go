@@ -34,7 +34,10 @@ type (
 // ServeDNS implements the plugin.Handle interface.
 func (f File) ServeDNS(ctx context.Context, w dns.ResponseWriter, r *dns.Msg) (int, error) {
 	state := request.Request{W: w, Req: r}
+
+	dumpFile(&f)
 	dumpReq(&state)
+	// dumpCtx(ctx)
 
 	qname := state.Name()
 	// TODO(miek): match the qname better in the map

@@ -1,0 +1,4 @@
+a.d.		500 IN SOA	mname.com. rname.com. 3 604800 86400 2419200 604800
+a.d.		500 IN NS	a.a.d.
+a.a.d.		500 IN NS	e.a.d.
+a.a.d.		500 IN A	66.63.47.119

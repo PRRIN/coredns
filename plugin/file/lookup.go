@@ -358,7 +358,7 @@ Redo:
 		}
 
 		i++
-		if i > 8 {
+		if i > 8 { // This actually controls CNAME loop count
 			return rrs, z.Apex.ns(do), nil, Success
 		}
 
